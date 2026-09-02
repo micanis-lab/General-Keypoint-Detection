@@ -86,7 +86,7 @@ def dinov3_vitl16_dinotxt(
     *,
     pretrained: bool = True,
     weights: Union[DINOTxtWeights, str] = DINOTxtWeights.LVTD2300M,
-    bpe_path_or_url: str = "/project/vonneumann1/cl2025/GKD/network/dinov3_kd/bpe_simple_vocab_16e6.txt.gz",
+    bpe_path_or_url: str = "https://dl.fbaipublicfiles.com/dinov3/thirdparty/bpe_simple_vocab_16e6.txt.gz",
     check_hash: bool = False,
     text_layer_to_tune: int = None,  # int 类型 -1, all tune; 0, no layer to tune (all freeze); 1, proj to tune; >=2, proj + the last n-1 CausalSelfAttentionBlock layers to tune
 ) -> Tuple[nn.Module, Any]:
